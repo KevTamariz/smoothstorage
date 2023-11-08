@@ -41,7 +41,7 @@ class Dir extends Component {
 
   fillEntries() {
     if (this.state.loading) {
-      return <Loading text="Loading..." />;
+      return <Loading text="Cargando..." />;
     }
 
     const content = this.state.dir.content;
@@ -49,7 +49,7 @@ class Dir extends Component {
 
     const directories = [
       <Dirent
-        name="Up a dir..."
+        name="Sube una car..."
         key="parent"
         isDirectory
         parentDirectory
@@ -100,7 +100,7 @@ class Dir extends Component {
           <Col>
             <FormModal
               btn="success"
-              title="Create Directory"
+              title="Crea una Carpeta"
               icon={<FolderPlus {...iconStyle} />}
             >
               <MkDirForm path={path} reload={() => this.reload()} />

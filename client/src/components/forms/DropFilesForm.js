@@ -68,8 +68,8 @@ class DropFilesForm extends Component {
             className="m-0"
           >
             {this.state.uploading
-              ? 'Uploading file(s)...'
-              : 'Drop File(s) Here to Upload'}
+              ? 'Subiendo archivo(s)...'
+              : 'Arrastra archivo(s) aqui para subir'}
           </p>
         </Jumbotron>
       </>

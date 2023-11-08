@@ -48,7 +48,7 @@ class FilesForm extends Component {
 
   render() {
     if (this.state.uploading) {
-      return <Loading title="Uploading files..." text="Uploading" />;
+      return <Loading title="Subiendo archivos..." text="Subidos" />;
     }
     return (
       <>

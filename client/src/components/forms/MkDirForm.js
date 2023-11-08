@@ -45,7 +45,7 @@ class MkDirForm extends Component {
   render() {
     if (this.state.creating) {
       return (
-        <Loading title="Creating directory..." text="Creating directory..." />
+        <Loading title="Creando carpeta..." text="Creando carpeta..." />
       );
     }
     return (
