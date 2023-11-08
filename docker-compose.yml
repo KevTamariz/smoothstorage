@@ -2,12 +2,14 @@ version: '3'
 
 services:
     express:
+        image: 'kevtamariz/smoothstorage:server.v1'
         environment: 
             HOME_CLOUD_STORAGE: /home/ubuntu/storage
         ports:
             - "8081:5000"
 
     react:
+        image: 'kevtamariz/smoothstorage:client.v1'
         ports:
             - "8080:3000"
         depends_on: 
