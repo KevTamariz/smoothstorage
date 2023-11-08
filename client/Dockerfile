@@ -1,21 +1,11 @@
-FROM node:current-alpine as builder
-
-WORKDIR /usr/src/app/client
-
-COPY ["package*.json","."]
-
-RUN npm ci
-
-COPY [".", "."]
-
-RUN npm run build
-
 FROM node:current-alpine
 
-WORKDIR /usr/src/app/client
+WORKDIR /usr/src/app/server
 
-COPY --from=builder /usr/src/app/client/build .
+COPY package*.json ./
 
-RUN npm i -g serve
+RUN npm install
 
-CMD ["serve", "-s", "build", "-l", "3000" ]
+COPY . .
+
+CMD ["npm", "start"]
