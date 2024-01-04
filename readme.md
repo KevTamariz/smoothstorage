@@ -1,4 +1,4 @@
-## Production Setup
+## Production Setup (tested)
 
 ### Local (Linux & Windows)
 
